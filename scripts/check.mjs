@@ -1,0 +1,7 @@
+import {readFile,access} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {variants} from './catalog.mjs';
+const routes=JSON.parse(await readFile('dist/routes.json','utf8'));const titles=new Set();const descriptions=new Set();let links=0;
+for(const route of routes){const file=route==='/'?'dist/index.html':`dist${route}index.html`;const html=await readFile(file,'utf8');assert.equal((html.match(/<h1(?:\s|>)/g)||[]).length,1,`${route}: one h1`);const title=html.match(/<title>(.*?)<\/title>/s)?.[1];const desc=html.match(/name="description" content="([^"]*)"/)?.[1];assert(title&&desc,`${route}: metadata`);assert(!titles.has(title),`${route}: duplicate title`);assert(!descriptions.has(desc),`${route}: duplicate description`);titles.add(title);descriptions.add(desc);assert(html.includes('name="robots" content="noindex, follow"'),`${route}: preview indexing`);for(const match of html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs))JSON.parse(match[1]);for(const [,url] of html.matchAll(/(?:href|src)="([^"]+)"/g)){if(!url.startsWith('/')||url.startsWith('//'))continue;const target=url.split('#')[0];if(!target)continue;await access('dist'+(target.endsWith('/')?target+'index.html':target));links++;}}
+for(const p of variants){await access(`dist/product/${p.slug}/index.html`);assert(p.price>0);}
+console.log(`Verified ${routes.length} pages, ${variants.length} variants, ${links} internal links/assets, unique metadata, structured data, single H1s and preview indexing protection.`);

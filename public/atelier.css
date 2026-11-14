@@ -1,0 +1,300 @@
+/* The house palette — the approved campaign becomes the whole storefront. */
+:root{--paper:#10160f;--ink:#eee9dc;--muted:#a8ae9c;--line:#c5b48928;--brass:#ceb88c;--surface:#171e14;--gold:#ddc79b}
+body.atelier{background:var(--paper);color:var(--ink)}
+::selection{background:#d7c193;color:#10160f}
+.atelier em{color:var(--gold)}
+.atelier .site-header{background:rgba(16,22,15,.95);color:var(--ink);border:0;box-shadow:none;backdrop-filter:blur(18px)}
+.atelier .site-header.scrolled{background:rgba(16,22,15,.96);color:var(--ink);border:0;box-shadow:none}
+.atelier.home-page .site-header:not(.scrolled){background:transparent;backdrop-filter:none;border:0}
+.atelier.home-page .site-header.scrolled{background:rgba(16,22,15,.96);color:var(--ink);border:0}
+.atelier .announcement{background:#141b12;color:#b7baa8}
+.atelier .announcement span{color:#d1bc91}
+.atelier .menu-toggle span{background:var(--ink)}
+.atelier .mobile-nav{background:#10160f;color:var(--ink)}
+.atelier .campaign-bottom{border:0}
+.atelier .campaign-dash{display:none}
+.atelier .campaign-photo{filter:saturate(.82)}
+.atelier .text-link{color:var(--gold);border:0;gap:35px;padding:15px 0;font-size:10px;letter-spacing:.035em}
+.atelier .text-link:after{display:none}
+.atelier .text-link:hover{color:#f7e3b7}
+.atelier .button{border-color:#ac97626b;color:var(--ink);background:transparent;padding:18px 25px}
+.atelier .button:hover{background:#d9c397;color:#131a10;border-color:#d9c397}
+.atelier .button.dark{background:#ddc79b;color:#182014;border-color:#ddc79b}
+.atelier .button.dark:hover{background:#eee0c2;border-color:#eee0c2;box-shadow:0 8px 35px -16px #cab17a66}
+.atelier .eyebrow{color:#b9a47e}
+.atelier p{color:var(--muted)}
+/* A slow editorial progression, with no ornamental separators. */
+.house-prologue{padding-top:135px;padding-bottom:125px;background:#10160f}
+.house-prologue>.eyebrow{margin-bottom:50px}
+.house-prologue>h2{font-size:clamp(50px,5.9vw,96px);line-height:1.05;max-width:1100px;letter-spacing:-.045em}
+.house-prologue h2 em{display:inline-block}
+.prologue-bottom{display:grid;grid-template-columns:1fr 1.65fr 1fr;align-items:end;gap:55px;margin-top:60px}
+.prologue-bottom>span{font-size:8px;letter-spacing:.12em;line-height:1.9;color:#727d69}
+.prologue-bottom>p{font-size:12px;line-height:2;max-width:460px}
+.prologue-bottom>.text-link{justify-self:end;white-space:nowrap}
+.salon-signatures{background:#171e14;padding-top:105px;padding-bottom:110px}
+.salon-signatures .section-heading{align-items:end;margin-bottom:60px}
+.salon-signatures .section-heading>div:last-child{max-width:300px;padding-bottom:3px}
+.salon-signatures .section-heading>div:last-child>p{font-size:12px;margin-bottom:12px}
+.salon-grid{gap:35px}
+.atelier .product-image{background:#131a12;outline:0;box-shadow:none;aspect-ratio:4/5;isolation:isolate}
+.atelier .product-image img{filter:saturate(.88);transition:transform 1.2s var(--ease-atelier),filter .7s}
+.atelier .product-image:hover{outline:0;box-shadow:none}
+.atelier .product-image:hover img{filter:saturate(1);transform:scale(1.035)}
+.atelier .image-action{background:linear-gradient(transparent,#0c130bf0);color:#e5d4af;backdrop-filter:none;font-size:9px;padding:40px 22px 22px}
+.atelier .product-meta{margin-top:25px;color:#839076;font-size:8px;letter-spacing:.11em}
+.atelier .product-title{margin-top:11px;align-items:baseline}
+.atelier .product-title h3{font-size:36px;color:#ede5d2;letter-spacing:-.035em}
+.atelier .product-title>span{font-size:12px;color:#d1bd96}
+.atelier .notes{font-size:10px;color:#98a08c;margin-top:11px}
+.atelier .quick-add{border:0;color:#c3ac80;max-width:130px;font-size:9px;padding:12px 0;min-height:44px;letter-spacing:.035em}
+.atelier .quick-add:hover{color:#f2dfb5}
+.atelier .quick-add:active{background:transparent}
+.atelier .product-card:hover .product-title h3{color:#e6cc98}
+.salon-grid .product-card:nth-child(2){padding-top:65px}
+.salon-grid .product-card:nth-child(3){padding-top:120px}
+.scent-interlude{display:grid;grid-template-columns:1fr 1fr;min-height:790px;background:#0e1916;position:relative;overflow:hidden}
+.interlude-photo{position:relative;overflow:hidden;min-height:790px;background:#0e1916}
+.interlude-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 70%,#0e1916)}
+.interlude-image{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(.75);transition:transform 1.4s}
+.interlude-photo:hover .interlude-image{transform:scale(1.025)}
+.interlude-copy{padding:100px 13% 85px 9%;position:relative;align-self:center}
+.interlude-copy .eyebrow{margin-bottom:35px;color:#89a799}
+.interlude-copy h2{font-size:clamp(52px,5.1vw,83px);line-height:1.02}
+.interlude-copy>p{font-size:12px;line-height:2;margin-top:35px;color:#a5b4a7}
+.interlude-copy>.text-link{margin-top:20px}
+.interlude-footnote{display:block;margin-top:75px;font-size:7px;letter-spacing:.18em;color:#63816f}
+.worlds-section{background:#10160f;padding-top:120px;padding-bottom:130px}
+.worlds-section .section-heading h2{font-size:clamp(55px,5.5vw,90px)}
+.worlds-layout{display:grid;grid-template-columns:1fr 1fr;column-gap:7%;row-gap:75px;align-items:start;margin-top:70px}
+.world-portrait{min-width:0}
+.world-2{padding-top:110px}.world-4{padding-top:110px}
+.world-image{aspect-ratio:1/1.03;overflow:hidden;background:#192115;position:relative}
+.world-image img{width:100%;height:100%;filter:saturate(.7) brightness(.8);transition:transform 1.4s var(--ease-atelier),filter .8s}
+.world-portrait:hover img{transform:scale(1.035);filter:saturate(.95) brightness(.95)}
+.world-caption{position:relative;margin-top:25px;padding-right:35px}
+.world-caption .eyebrow{font-size:7px;color:#7e8c70;margin-bottom:12px}
+.world-caption h3{font-size:40px;color:#e8dfcc;line-height:1.1}
+.world-caption p{font-size:10px;margin-top:12px}
+.world-caption>span:last-child{position:absolute;right:0;top:37px;font-size:26px;color:#b59d71;transition:transform .5s}
+.world-portrait:hover .world-caption>span:last-child{transform:translate(4px,-4px)}
+.house-belief{position:relative;overflow:hidden;background:#1d2619;padding-top:115px;padding-bottom:170px;display:grid;grid-template-columns:1fr 1fr;gap:35px 12%}
+.house-belief>.eyebrow{grid-column:1/-1;margin-bottom:20px}
+.house-belief h2{font-size:clamp(55px,5.5vw,88px);line-height:1.05;position:relative;z-index:1}
+.belief-aside{align-self:center;max-width:360px;position:relative;z-index:1}
+.belief-aside p{font-size:13px;line-height:2.1;color:#aab59b}
+.belief-aside .text-link{margin-top:20px}
+.belief-wordmark{position:absolute;bottom:-.33em;left:3%;font-family:var(--serif);font-size:24vw;line-height:1;letter-spacing:.05em;color:#263021;pointer-events:none}
+.gifting-campaign{display:grid;grid-template-columns:1fr 1fr;min-height:780px;background:#171b12}
+.gifting-campaign-photo{overflow:hidden;position:relative;min-height:780px}
+.gifting-campaign-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:brightness(.65) saturate(.55)}
+.gifting-campaign-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 65%,#171b12)}
+.gifting-campaign-copy{padding:100px 12% 90px 10%;align-self:center}
+.gifting-campaign-copy .eyebrow{margin-bottom:35px}
+.gifting-campaign-copy h2{font-size:clamp(60px,6vw,98px);line-height:.99}
+.gifting-campaign-copy p{font-size:12px;line-height:2;margin-top:35px;color:#afb49b}
+.gifting-campaign-copy .text-link{margin-top:20px}
+/* Product chapters — the image is a campaign, the copy is an invitation. */
+.atelier .product-detail{padding:35px 6% 95px;gap:7%;background:#10160f;align-items:start}
+.atelier .detail-copy{padding-top:22px}
+.atelier .breadcrumbs{font-size:8px;color:#7b876f;margin-bottom:40px}
+.atelier .detail-copy>.eyebrow{font-size:8px;color:#a58f64;margin-bottom:20px}
+.atelier .detail-copy h1{font-size:clamp(65px,6.7vw,110px);line-height:.95;color:#efe6d2;letter-spacing:-.045em}
+.atelier .detail-tagline{font-size:28px;color:#bba77d;margin-top:19px;line-height:1.2}
+.atelier .detail-story{font-size:12px;color:#a6ae98;margin-top:28px;max-width:450px;line-height:2}
+.atelier .detail-notes{gap:0 16px;margin-top:30px;align-items:baseline}
+.atelier .detail-notes>span{border:0;padding:0;font-family:var(--serif);font-size:20px;color:#d0c19f}
+.atelier .detail-notes>.note-label{width:100%;font-family:var(--sans);font-size:7px;letter-spacing:.15em;color:#6f7f63;margin-bottom:10px}
+.atelier .detail-image{background:#141b12;top:105px}
+.atelier .detail-image img{aspect-ratio:4/5.15;width:100%;filter:saturate(.9);object-fit:cover}
+.atelier .detail-image-caption{display:flex;justify-content:space-between;align-items:center;font-size:7px;letter-spacing:.15em;bottom:22px;color:#e0d1b0;text-shadow:0 1px 10px #000}
+.atelier .detail-image:after{content:'';position:absolute;inset:75% 0 0;background:linear-gradient(transparent,#0c130b80);pointer-events:none}
+.atelier .detail-image-caption{z-index:1}
+.atelier .variant-options{margin-top:35px;gap:12px}
+.atelier .variant-options legend{font-size:7px;letter-spacing:.16em;color:#7e8c70}
+.atelier .variant-options a{background:transparent;border:1px solid #a08c5938;padding:13px 20px;min-width:155px}
+.atelier .variant-options a[aria-current]{background:#242c1c;border-color:#c6aa6d99}
+.atelier .variant-options a:hover{background:#1f291a;box-shadow:none;border-color:#c6aa6d99}
+.atelier .variant-options span{color:#e1d5bb;font-size:13px}
+.atelier .variant-options small{font-size:8px;color:#929e82}
+.atelier .product-price{font-size:25px;color:#e5d5b0}
+.atelier .purchase-row{margin-bottom:22px}
+.atelier .purchase-row small{font-size:7px;color:#78876a}
+.atelier .quantity-control{border-color:#c6aa6d33;height:39px}
+.atelier .quantity-control input{color:#dfd2b5}
+.atelier .quantity-control button:hover{background:#2b3521;color:#ebdfc4}
+.atelier .add-main{font-size:10px;letter-spacing:.06em;min-height:58px}
+.atelier .product-assurances{color:#7f8f70;font-size:8px;gap:25px;padding-top:20px;padding-bottom:30px}
+.atelier .product-assurances span:before{color:#ad9668}
+.atelier .product-accordions{border:0;margin-top:6px}
+.atelier .product-accordions details{border-color:#9ba47a1f}
+.atelier .product-accordions summary{font-size:10px;color:#bcbea8;padding:17px 0}
+.atelier .product-accordions details p{color:#8d9b7d;font-size:10px}
+.atelier dl{font-size:10px}
+.atelier dt{color:#b59b6b}.atelier dd{color:#9ca68d}
+.fragrance-intimacy{text-align:center;background:#1b2317;padding-top:110px;padding-bottom:110px}
+.fragrance-intimacy>.eyebrow{margin-bottom:35px;color:#8e9c7e}
+.fragrance-intimacy h2{max-width:850px;margin:auto;font-size:clamp(48px,5.7vw,88px);line-height:1.02;color:#e7ddc6}
+.fragrance-intimacy>p{max-width:590px;margin:30px auto 0;font-size:12px;line-height:2.1;color:#9eaa90}
+.composition-section{background:#10160f;padding-top:105px;padding-bottom:110px}
+.composition-acts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7%;margin-top:65px}
+.composition-act .act-number{display:block;font-family:var(--serif);font-size:70px;font-style:italic;line-height:1;color:#536047;margin-bottom:30px}
+.composition-act h3{font-size:37px;color:#e6dbc1;margin-bottom:22px}
+.composition-act .act-notes{font-size:12px;line-height:1.9;color:#c5b58e;min-height:45px;margin-bottom:20px}
+.composition-act>p:last-child{font-size:11px;line-height:1.9;color:#819173;max-width:240px}
+.wearing-scene{display:grid;grid-template-columns:1fr 1fr;background:#192216}
+.wearing-image{position:relative;overflow:hidden;min-height:680px}
+.wearing-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.18);filter:brightness(.55) saturate(.7);object-position:center 60%}
+.wearing-image:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 65%,#192216)}
+.wearing-copy{padding:85px 13% 85px 10%;align-self:center}
+.wearing-copy>.eyebrow{margin-bottom:30px}
+.wearing-copy h2{font-size:clamp(50px,5.2vw,85px)}
+.wearing-copy>p{font-size:12px;margin-top:30px;line-height:2}
+.wearing-copy>.wearing-ritual{margin-top:50px;margin-bottom:15px;font-size:8px}
+.wearing-copy>.wearing-ritual+p{margin-top:0;font-size:11px}
+.wearing-copy .text-link{margin-top:25px}
+.atelier .related{background:#10160f;padding-top:100px;padding-bottom:100px}
+.atelier .related .product-grid{gap:35px}
+/* Every secondary page belongs to the same house. */
+.atelier .page-intro{padding-top:95px;padding-bottom:80px;background:#10160f}
+.atelier .page-intro h1{color:#e8dfcb;line-height:1.02}
+.atelier .page-intro p{color:#929f84;line-height:2}
+.atelier .shop-section{background:#10160f}
+.atelier .shop-toolbar{border-top:0;border-bottom-color:#98a07a29;padding:20px 0 25px}
+.atelier .filters{gap:30px}
+.atelier .filters button{color:#839373;min-height:36px}
+.atelier .filters button.active{color:#e0cc9c}
+.atelier .filters button.active:after{background:#a88f5e}
+.atelier .sort-label{color:#8b9a7a}
+.atelier select{background:#10160f;color:#c7c8b1;color-scheme:dark}
+.atelier .results-count{color:#6e8060;font-size:9px;padding-top:25px;padding-bottom:35px}
+.atelier .shop-grid{gap:65px 35px}
+.atelier .format-note{border-top:0;background:#1a2417;margin-top:95px;padding:55px;gap:40px}
+.atelier .format-note h2{color:#d9ceb3}
+.atelier .format-note p{color:#93a184}
+.atelier .collection-hero{background:#141d12;min-height:670px;overflow:hidden}
+.atelier .collection-hero>.section{position:relative;z-index:1}
+.atelier .collection-hero>img{filter:saturate(.8) brightness(.75);min-height:670px;object-fit:cover}
+.atelier .collection-hero h1{font-size:clamp(60px,6.4vw,105px);color:#e9e0cc}
+.atelier .collection-hero p{color:#9ea98f}
+.atelier .collection-index .collection-card{background:#11190f;aspect-ratio:1.1}
+.atelier .collection-card img{filter:brightness(.7) saturate(.7)}
+.atelier .collection-card:hover img{filter:brightness(.9) saturate(.9)}
+.atelier .collection-card h3{font-size:40px;color:#eee3ca}
+.atelier .story-opening{background:#10160f;padding-top:110px;padding-bottom:110px}
+.atelier .story-editorial{background:#1b2417;color:var(--ink)}
+.atelier .story-editorial p{color:#9da98d}
+.atelier .story-editorial .editorial-image img{filter:saturate(.7) brightness(.75)}
+.atelier .manifesto{background:#10160f}
+.atelier .manifesto .ornament{display:none}
+.atelier .guide-picker{background:#1a2416;border:0;padding:40px}
+.atelier .guide-options button{border-color:#9da57b22;color:#b5bda5}
+.atelier .guide-options button.active,.atelier .guide-options button:hover{color:#e1ca9c}
+.atelier #guide-result p{color:#8e9e7e}
+.atelier .guide-articles article{border-color:#9da57b22}
+.atelier .guide-articles p{color:#8b9a7a}
+.atelier .faq-list details{border-color:#9da57b25}
+.atelier .faq-list summary{color:#d4c8aa}
+.atelier .faq-list details p{color:#94a285}
+.atelier .contact-grid>div>a{color:#c9b48a;border-color:#9da57b22}
+.atelier address{color:#7e8f6e}
+.atelier form label{color:#a1af91;font-size:10px}
+.atelier form input,.atelier form textarea,.atelier form select{border-color:#9da57b33;color:#d9d8c6;background:transparent;color-scheme:dark}
+.atelier form input::placeholder,.atelier form textarea::placeholder{color:#66775a}
+.atelier form input:focus,.atelier form textarea:focus,.atelier form select:focus{border-color:#cab180;background:#cdb58705}
+.atelier .form-status,.atelier .micro{color:#849674}
+.atelier .service-row{border-color:#9da57b22}
+.atelier .service-row h2{color:#d8cfb7}
+.atelier .service-row p{color:#8e9e7e}
+.atelier .prose p{color:#99a68a}
+.atelier .prose p a{color:#c9b48a}
+.atelier .checkout-summary{background:#1b2517}
+/* A quieter, more generous ending. */
+.atelier .newsletter{background:#1c2718;padding:90px 6%;border:0;grid-template-columns:1.25fr 1fr;gap:12%}
+.atelier .newsletter h2{font-size:clamp(43px,4.2vw,67px);line-height:1.05;margin-top:30px;max-width:650px}
+.atelier .newsletter p{font-size:11px;color:#8e9d7e;max-width:350px;line-height:1.9;margin-top:25px}
+.atelier .newsletter-form label{color:#b8bea2;font-size:10px}
+.atelier .newsletter-form>div{border-color:#9da57b55}
+.atelier .newsletter-form input{border:0;padding:16px 0;color:#dcd7bf}
+.atelier .newsletter-form .form-status{font-size:8px;max-width:none;margin-top:15px;color:#728563}
+.atelier footer{background:#0c120b;padding-top:75px;padding-bottom:30px}
+.atelier .footer-main{padding-bottom:55px;gap:45px}
+.atelier .footer-logo{color:#d7c193;font-size:55px}
+.atelier .footer-main h3{color:#c1b18b;font-size:8px;letter-spacing:.11em}
+.atelier .footer-main p{color:#728362}
+.atelier .footer-main>div>a:not(.footer-logo){color:#91a07f;font-size:10px}
+.atelier .footer-bottom{border:0;color:#5b6f4d;font-size:8px;gap:25px}
+.atelier .footer-bottom a{color:#82946e}
+.atelier dialog{background:#172112;color:#e8dfca}
+.atelier dialog::backdrop{background:#070c08b8;backdrop-filter:blur(8px)}
+.atelier dialog .close-dialog{color:#a9ae95}
+.atelier .bag-item{border-color:#91a07522}
+.atelier .bag-item h3{color:#dfd3b5}
+.atelier .bag-item p{color:#8c9d7a}
+.atelier .bag-item button{color:#a6b18e}
+.atelier .bag-item img{filter:brightness(.85) saturate(.8)}
+.atelier .search-dialog>input{color:#e0d7bb;border-color:#a9b38455}
+.atelier .toast{background:#d4bd8d;color:#172112;box-shadow:0 8px 35px #0006}
+@media(min-width:1600px){.atelier .detail-copy{padding-top:35px}.atelier .detail-copy h1{font-size:110px}.atelier .detail-story{font-size:13px;max-width:490px}.atelier .detail-tagline{font-size:30px}.atelier .variant-options{margin-top:40px}.atelier .detail-image img{aspect-ratio:4/5}}
+@media(max-width:1100px){
+ .house-prologue{padding-top:95px;padding-bottom:90px}.prologue-bottom{gap:30px;grid-template-columns:1fr 1.6fr}.prologue-bottom>.text-link{grid-column:2;justify-self:start}
+ .salon-grid{gap:25px}.salon-grid .product-card:nth-child(2){padding-top:45px}.salon-grid .product-card:nth-child(3){padding-top:90px}
+ .atelier .product-title h3{font-size:30px}.atelier .product-meta{font-size:7px}.atelier .notes{font-size:9px}
+ .scent-interlude,.interlude-photo{min-height:640px}.interlude-copy{padding:75px 12%}.interlude-copy h2{font-size:59px}
+ .gifting-campaign,.gifting-campaign-photo{min-height:660px}.gifting-campaign-copy{padding:75px 12%}.gifting-campaign-copy h2{font-size:68px}
+ .worlds-layout{column-gap:6%;row-gap:50px}.world-2,.world-4{padding-top:75px}
+ .atelier .product-detail{gap:5%;padding-left:5%;padding-right:5%}.atelier .detail-copy h1{font-size:73px}.atelier .detail-tagline{font-size:25px}.atelier .detail-story{font-size:11px}
+ .atelier .variant-options a{min-width:130px;padding:12px 15px}.atelier .product-assurances{gap:14px;font-size:7px}
+ .atelier .detail-notes>span{font-size:18px}.atelier .detail-notes>.note-label{font-size:7px}
+ .composition-acts{gap:5%}.wearing-image{min-height:630px}.wearing-copy{padding:65px 12%}.wearing-copy h2{font-size:60px}
+ .atelier .footer-main{gap:30px}
+}
+@media(max-width:760px){
+ .atelier .site-header,.atelier .site-header.scrolled{height:77px}
+ .atelier .mobile-nav a{color:#dcd2b8}
+ .atelier .campaign-photo{filter:saturate(.72) brightness(.86)}
+ .atelier .campaign-bottom{border:0}
+ .house-prologue{padding:80px 7%}.house-prologue>.eyebrow{font-size:7px;margin-bottom:35px}
+ .house-prologue>h2{font-size:clamp(40px,10vw,60px);line-height:1.08;letter-spacing:-.04em}
+ .prologue-bottom{grid-template-columns:1fr;gap:25px;margin-top:35px}.prologue-bottom>span{font-size:7px;order:3;color:#6f8061;margin-top:10px}.prologue-bottom>p{font-size:11px;line-height:2}.prologue-bottom>.text-link{grid-column:1;justify-self:start}
+ .salon-signatures{padding:75px 7%}.salon-signatures .section-heading{margin-bottom:40px}.salon-signatures .section-heading h2{font-size:48px}
+ .salon-signatures .section-heading>div:last-child{margin-top:25px}.salon-signatures .section-heading>div:last-child>p{font-size:10px;margin-bottom:5px}
+ .salon-grid{grid-template-columns:1fr;gap:45px}.salon-grid .product-card:nth-child(2),.salon-grid .product-card:nth-child(3){padding-top:0}
+ .salon-grid .product-card:nth-child(2){margin-left:12%}.salon-grid .product-card:nth-child(3){margin-right:12%}
+ .atelier .salon-grid .product-image{aspect-ratio:4/4.6}.atelier .salon-grid .product-title h3{font-size:35px}.atelier .salon-grid .product-meta{font-size:7px}.atelier .salon-grid .notes{font-size:10px}
+ .atelier .salon-grid .product-title>span{font-size:12px}.atelier .salon-grid .quick-add{font-size:9px}
+ .atelier .product-title h3{font-size:25px}.atelier .product-title>span{font-size:9px;padding-top:2px}.atelier .product-meta{font-size:6px;margin-top:17px;letter-spacing:.06em}.atelier .notes{font-size:8px;margin-top:9px}
+ .atelier .product-image{aspect-ratio:3/4}.atelier .quick-add{font-size:8px;max-width:100px;min-height:42px}
+ .scent-interlude{grid-template-columns:1fr;min-height:0}.interlude-photo{height:500px;min-height:0}.interlude-photo:after{background:linear-gradient(0deg,#0e1916,transparent 28%)}
+ .interlude-copy{padding:35px 7% 70px}.interlude-copy .eyebrow{font-size:7px;margin-bottom:25px}.interlude-copy h2{font-size:60px}.interlude-copy>p{font-size:11px;margin-top:25px;line-height:2}.interlude-footnote{font-size:6px;margin-top:40px}
+ .worlds-section{padding:80px 7%}.worlds-section .section-heading h2{font-size:59px}.worlds-section .section-heading>p{font-size:11px}
+ .worlds-layout{grid-template-columns:1fr;gap:45px;margin-top:40px}.world-2,.world-4{padding-top:0}.world-2,.world-4{margin-left:12%}.world-1,.world-3{margin-right:8%}
+ .world-image{aspect-ratio:1/1.12}.world-caption{margin-top:20px}.world-caption .eyebrow{font-size:6px;margin-bottom:10px}.world-caption h3{font-size:34px}.world-caption p{font-size:9px;margin-top:9px}.world-caption>span:last-child{top:30px;font-size:22px}
+ .house-belief{padding:80px 7% 110px;grid-template-columns:1fr;gap:30px}.house-belief>.eyebrow{font-size:7px;margin-bottom:0}.house-belief h2{font-size:58px;line-height:1.05}.belief-aside p{font-size:11px;max-width:300px}.belief-aside .text-link{margin-top:10px}.belief-wordmark{font-size:26vw;bottom:-.27em}
+ .gifting-campaign{grid-template-columns:1fr;min-height:0}.gifting-campaign-photo{height:460px;min-height:0}.gifting-campaign-photo:after{background:linear-gradient(0deg,#171b12,transparent 30%)}
+ .gifting-campaign-copy{padding:40px 7% 75px}.gifting-campaign-copy .eyebrow{font-size:7px;margin-bottom:25px}.gifting-campaign-copy h2{font-size:65px}.gifting-campaign-copy p{font-size:11px;margin-top:25px}
+ .atelier .product-detail{padding:0 0 65px;gap:0}.atelier .product-detail .detail-image{top:auto;height:clamp(360px,63svh,550px);margin:0}
+ .atelier .detail-image img{height:100%;aspect-ratio:auto;object-position:center}
+ .atelier .detail-image-caption{bottom:18px;left:20px;right:20px;font-size:6px}
+ .atelier .detail-copy{padding:35px 7% 0}.atelier .breadcrumbs{font-size:7px;margin-bottom:32px}
+ .atelier .detail-copy>.eyebrow{font-size:7px;margin-bottom:18px}.atelier .detail-copy h1{font-size:68px}.atelier .detail-tagline{font-size:24px;margin-top:17px}.atelier .detail-story{font-size:11px;margin-top:25px;line-height:2}
+ .atelier .detail-notes{margin-top:28px;gap:0 15px}.atelier .detail-notes>span{font-size:20px}.atelier .detail-notes>.note-label{font-size:6px;margin-bottom:10px}
+ .atelier .variant-options{margin-top:32px;gap:10px}.atelier .variant-options a{min-width:0;flex:1;padding:13px 15px}.atelier .variant-options legend{font-size:7px}
+ .atelier .product-price{font-size:25px}.atelier .purchase-row small{font-size:7px}.atelier .quantity-control{height:39px}
+ .atelier .product-assurances{font-size:7px;gap:20px}.atelier .add-main{font-size:9px;min-height:55px}
+ .fragrance-intimacy{padding:75px 7%}.fragrance-intimacy>.eyebrow{font-size:7px;margin-bottom:28px}.fragrance-intimacy h2{font-size:48px;line-height:1.03}.fragrance-intimacy>p{font-size:11px;margin-top:25px}
+ .composition-section{padding:75px 7%}.composition-section .section-heading h2{font-size:51px}.composition-section .section-heading p{font-size:10px}
+ .composition-acts{grid-template-columns:1fr;gap:45px;margin-top:45px}.composition-act{display:grid;grid-template-columns:60px 1fr;gap:0 20px}.composition-act .act-number{font-size:52px;grid-row:1/4;margin:0}.composition-act h3{font-size:34px;margin-bottom:15px}.composition-act .act-notes{font-size:11px;min-height:0;margin-bottom:15px}.composition-act>p:last-child{font-size:10px;max-width:none}
+ .wearing-scene{grid-template-columns:1fr}.wearing-image{height:430px;min-height:0}.wearing-image:after{background:linear-gradient(0deg,#192216,transparent 30%)}
+ .wearing-copy{padding:35px 7% 70px}.wearing-copy>.eyebrow{font-size:7px;margin-bottom:25px}.wearing-copy h2{font-size:60px}.wearing-copy>p{font-size:11px;margin-top:25px}.wearing-copy>.wearing-ritual{font-size:7px;margin-top:35px}
+ .atelier .related{padding:70px 7%}.atelier .related .product-grid{gap:17px}.atelier .related .section-heading h2{font-size:47px}
+ .atelier .page-intro{padding-top:65px;padding-bottom:55px}.atelier .page-intro h1{font-size:60px}.atelier .shop-toolbar{padding-top:10px;padding-bottom:20px}.atelier .filters{gap:10px 20px}.atelier .filters button{font-size:9px}.atelier .shop-grid{gap:40px 17px}.atelier .results-count{font-size:8px;padding-top:20px;padding-bottom:25px}
+ .atelier .format-note{padding:30px;margin-top:55px;gap:20px}.atelier .format-note h2{font-size:38px}.atelier .format-note p{font-size:10px}
+ .atelier .collection-hero{min-height:0}.atelier .collection-hero>img{min-height:0;height:480px}.atelier .collection-hero h1{font-size:67px}.atelier .collection-card h3{font-size:35px}
+ .atelier .story-opening{padding-top:75px;padding-bottom:75px}.atelier .guide-picker{padding:30px}.atelier .guide-options button{font-size:27px}.atelier .service-row h2{font-size:32px}
+ .atelier .newsletter{padding:65px 7%;grid-template-columns:1fr;gap:35px}.atelier .newsletter h2{font-size:45px;margin-top:25px}.atelier .newsletter p{font-size:10px;margin-top:22px}.atelier .newsletter-form label{font-size:9px}.atelier .newsletter-form .form-status{font-size:8px;margin-top:12px}
+ .atelier footer{padding-top:55px;padding-bottom:25px}.atelier .footer-main{gap:35px 25px;padding-bottom:40px}.atelier .footer-logo{font-size:48px}.atelier .footer-bottom{font-size:7px;gap:15px}
+}
+/* The approved wide Al-Sheikh campaign is cropped around its bottle. */
+.atelier img[src$="campaign/al-sheikh.jpg"]{object-position:73% center}
+@media(prefers-reduced-motion:reduce){.atelier .product-image img,.atelier .world-image img,.atelier .interlude-image{transition:none!important}}

@@ -1,0 +1,91 @@
+/* A single motion language: quiet responses, a longer product journey. */
+:root{--ease-atelier:cubic-bezier(.22,.68,0,1.01);--journey:780ms;--response:320ms}
+@view-transition{navigation:auto}
+::view-transition{pointer-events:none}
+::view-transition-group(*){animation-timing-function:var(--ease-atelier)}
+::view-transition-old(root){animation:page-away 240ms ease both}
+::view-transition-new(root){animation:page-in 480ms var(--ease-atelier) both}
+/* The masthead stays anchored while the page moves beneath it. */
+.site-header{view-transition-name:masthead}
+::view-transition-group(masthead){animation-duration:var(--journey)}
+::view-transition-old(masthead){animation:none;opacity:0}
+::view-transition-new(masthead){animation:none}
+::view-transition-group(perfume-image),
+::view-transition-group(perfume-name),
+::view-transition-group(perfume-price){animation-duration:var(--journey);animation-timing-function:var(--ease-atelier)}
+::view-transition-group(perfume-image){z-index:3;overflow:clip;isolation:isolate}
+::view-transition-group(perfume-name),::view-transition-group(perfume-price){z-index:4}
+::view-transition-image-pair(perfume-image){isolation:isolate;overflow:clip}
+::view-transition-old(perfume-image),::view-transition-new(perfume-image){width:100%;height:100%;object-fit:cover;mix-blend-mode:normal;animation-duration:var(--journey)}
+::view-transition-old(perfume-image){animation:shared-away 520ms ease both}
+::view-transition-new(perfume-image){animation:shared-in 600ms ease both}
+::view-transition-old(perfume-name),::view-transition-new(perfume-name),
+::view-transition-old(perfume-price),::view-transition-new(perfume-price){width:100%;height:100%;object-fit:contain;object-position:left center;mix-blend-mode:normal;animation-duration:650ms}
+.product-transition::view-transition-new(root){animation:product-page-in 680ms var(--ease-atelier) both}
+.product-transition .transition-selected{opacity:1!important;transform:none!important;transition:none!important}
+.product-transition .transition-selected [data-transition-part="image"]{transform:none!important;transition:none!important}
+.product-transition .transition-selected .image-action{opacity:0}
+.product-transition .detail-copy>:not([data-transition-part="name"]):not(.purchase-row){animation:detail-settle 800ms var(--ease-atelier) both}
+/* Desktop composition: copy first, the perfume settles into the right panel. */
+@media(min-width:761px){
+ .product-detail{grid-template-columns:1fr 1.08fr}
+ .product-detail>.detail-copy{grid-column:1;grid-row:1}
+ .product-detail>.detail-image{grid-column:2;grid-row:1}
+}
+.detail-copy h1,.product-title h3,.product-price{width:fit-content;max-width:100%}
+.product-price{display:inline-block}
+/* Small touches of depth and warmth; no continuous motion or noisy effects. */
+.product-card .product-title h3{transition:color var(--response) ease}
+.product-card:hover .product-title h3{color:var(--brass)}
+.product-image{outline:1px solid transparent;outline-offset:0;transition:outline-color .6s,outline-offset .6s,box-shadow .6s}
+@media(hover:hover){.product-image:hover{outline-color:#a48e6055;outline-offset:5px;box-shadow:0 15px 35px -24px #413a2780}}
+.button{transition:background var(--response),color var(--response),border-color var(--response),box-shadow .5s,transform .45s var(--ease-atelier)}
+.button:hover{box-shadow:0 6px 22px -12px #27291f66}
+.button:active,.quick-add:active{transform:translateY(1px)}
+.quick-add:active{background:#e6dece55}
+.variant-options a{transition:border-color .35s,background .35s,box-shadow .35s}
+.variant-options a:hover{box-shadow:inset 0 -2px 0 var(--brass)}
+input,textarea,select{transition:border-color .35s,background .35s}
+input:focus,textarea:focus,select:focus{border-color:var(--brass)}
+.quantity-control button{transition:background .25s,color .25s}
+.quantity-control button:hover{background:#ded7c6;color:var(--ink)}
+.guide-options button{transition:color .4s,padding .5s var(--ease-atelier)}
+.mobile-nav:not([hidden]){animation:menu-reveal .45s var(--ease-atelier) both}
+.mobile-nav:not([hidden]) a{animation:menu-item-in .6s var(--ease-atelier) both}
+.mobile-nav a:nth-child(2){animation-delay:35ms}.mobile-nav a:nth-child(3){animation-delay:70ms}.mobile-nav a:nth-child(4){animation-delay:105ms}.mobile-nav a:nth-child(5){animation-delay:140ms}.mobile-nav a:nth-child(6){animation-delay:175ms}
+.bag-dialog.dialog-leaving{animation:drawer-out .28s cubic-bezier(.4,0,.8,.3) both}
+.search-dialog.dialog-leaving{animation:search-out .2s ease both}
+.bag-dialog[open]::backdrop,.search-dialog[open]::backdrop{animation:backdrop-in .35s ease both}
+.dialog-leaving::backdrop{animation:backdrop-out .25s ease both}
+.bag-count{display:inline-block}.bag-count.just-added{animation:bag-tick .5s ease}
+.quick-add.just-added{color:var(--brass)}
+@supports(interpolate-size:allow-keywords){
+ :root{interpolate-size:allow-keywords}
+ details::details-content{height:0;opacity:0;overflow:clip;transition:height .4s var(--ease-atelier),opacity .3s,content-visibility .4s allow-discrete}
+ details[open]::details-content{height:auto;opacity:1}
+}
+@keyframes page-away{to{opacity:0}}
+@keyframes page-in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@keyframes product-page-in{0%{opacity:0}18%{opacity:0}100%{opacity:1}}
+@keyframes shared-away{0%,25%{opacity:1}100%{opacity:0}}
+@keyframes shared-in{0%{opacity:0}100%{opacity:1}}
+@keyframes detail-settle{0%,20%{opacity:0;translate:0 12px}100%{opacity:1;translate:0 0}}
+@keyframes menu-reveal{from{opacity:0;clip-path:inset(0 0 9% 0)}to{opacity:1;clip-path:inset(0)}}
+@keyframes menu-item-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes drawer-out{to{transform:translateX(100%)}}
+@keyframes search-out{to{opacity:0;transform:translateY(8px)}}
+@keyframes backdrop-in{from{background:#1b211c00;backdrop-filter:blur(0)}to{background:#1b211c66;backdrop-filter:blur(4px)}}
+@keyframes backdrop-out{to{background:#1b211c00;backdrop-filter:blur(0)}}
+@keyframes bag-tick{0%,100%{transform:translateY(0)}45%{transform:translateY(-3px);color:var(--brass)}}
+@media(max-width:760px){
+ :root{--journey:650ms}
+ .product-detail>.detail-image{grid-row:1;grid-column:1;height:clamp(320px,58svh,510px)}
+ .product-detail>.detail-copy{grid-row:2;grid-column:1}
+ .detail-image img{object-position:center}
+ .product-transition .detail-copy>:not([data-transition-part="name"]):not(.purchase-row){animation-duration:700ms}
+}
+@media(prefers-reduced-motion:reduce){
+ @view-transition{navigation:none}
+ ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
